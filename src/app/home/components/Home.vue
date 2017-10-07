@@ -23,8 +23,9 @@
           <router-link to="api" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
             <span class="icon-api f2 v-mid mr3"></span>Consuming an API
           </router-link>
-          <a href="" class="link green f3 pb5 fl w-100 w-50-l hover-blue">
-            <span class="icon-applications f2 v-mid mr3"></span>Building Large-Scale Applications</a>
+          <router-link to="applications" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+            <span class="icon-applications f2 v-mid mr3"></span>Building Large-Scale Applications
+          </router-link>
         </div>
     </div>
   </div>
