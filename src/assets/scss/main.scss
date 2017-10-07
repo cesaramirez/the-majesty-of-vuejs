@@ -1,4 +1,10 @@
+/** Variables **/ 
+
+$blue: #35495e;
+$green: #42b883;
+
 @import '~tachyons-sass/tachyons';
+@import '~styles/icons';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
 
 html, body {
@@ -7,4 +13,10 @@ html, body {
 
 h1, h2, h3, h4 {
     font-family: 'Raleway', sans-serif;
+}
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;  
 }

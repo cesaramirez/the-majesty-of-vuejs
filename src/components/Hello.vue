@@ -1,22 +1,32 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div>
+      <div class="dt tc center mv4">
+        <img src="~@/assets/logo.png" class="dib v-mid h4 dtc mr4">
+        <h1 class="blue f-subheadline v-mid dtc">The Majesty of Vue.js</h1>
+      </div>
+      <div class="mw8 w80 tc dib">
+        <p class="f5 lh-copy">This Site is based in the book The Majesty of VueJs, will guide you through the path of the rapidly spreading Javascript Framework called Vue.js!</p>
+        <div>
+          <h2 class="f2">About the Book</h2>
+          <p class="lh-copy">This book is written in an informal, intuitive, and easy-to-follow format, wherein all examples are appropriately detailed enough to provide adequate guidance to everyone.</p>
+          <p class="lh-copy">We’ll start from the very basics and through many examples we’ll cover the most significant features of Vue.js. By the end of this book, you will be able to create fast front end applications and increase the performance of your existing projects with Vue.js 2 integration.</p>
+        </div>
+
+        <h2 class="f2 blue">Contents</h2>
+        <div class="cf">
+          <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+            <span class="icon-introduction f2 v-mid mr3"></span>Introduction
+          </a>
+          <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+            <span class="icon-fundamentals f2 v-mid mr3"></span>Vue.js Fundamentals
+          </a>
+          <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+            <span class="icon-api f2 v-mid mr3"></span>Consuming an API
+          </a>
+          <a href="" class="link green f3 pb5 fl w-100 w-50-l hover-blue">
+            <span class="icon-applications f2 v-mid mr3"></span>Building Large-Scale Applications</a>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -25,29 +35,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
     }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>
