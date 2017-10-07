@@ -14,14 +14,12 @@
 
         <h2 class="f2 blue">Contents</h2>
         <div class="cf">
-          <router-link to="introduction">
-            <a class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+          <router-link to="introduction" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
               <span class="icon-introduction f2 v-mid mr3"></span>Introduction
-            </a>
           </router-link>
-          <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+          <router-link to="fundamentals" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
             <span class="icon-fundamentals f2 v-mid mr3"></span>Vue.js Fundamentals
-          </a>
+          </router-link>
           <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
             <span class="icon-api f2 v-mid mr3"></span>Consuming an API
           </a>
