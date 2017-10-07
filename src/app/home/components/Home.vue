@@ -20,9 +20,9 @@
           <router-link to="fundamentals" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
             <span class="icon-fundamentals f2 v-mid mr3"></span>Vue.js Fundamentals
           </router-link>
-          <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+          <router-link to="api" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
             <span class="icon-api f2 v-mid mr3"></span>Consuming an API
-          </a>
+          </router-link>
           <a href="" class="link green f3 pb5 fl w-100 w-50-l hover-blue">
             <span class="icon-applications f2 v-mid mr3"></span>Building Large-Scale Applications</a>
         </div>
