@@ -14,9 +14,11 @@
 
         <h2 class="f2 blue">Contents</h2>
         <div class="cf">
-          <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
-            <span class="icon-introduction f2 v-mid mr3"></span>Introduction
-          </a>
+          <router-link to="introduction">
+            <a class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
+              <span class="icon-introduction f2 v-mid mr3"></span>Introduction
+            </a>
+          </router-link>
           <a href="" class="link green f3 pb5 fl w-100 w-50-l v-mid hover-blue">
             <span class="icon-fundamentals f2 v-mid mr3"></span>Vue.js Fundamentals
           </a>
@@ -32,7 +34,6 @@
 
 <script>
 export default {
-  name: 'hello',
   data () {
     return {
     }
