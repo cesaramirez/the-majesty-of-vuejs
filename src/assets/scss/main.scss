@@ -5,7 +5,7 @@ $green: #42b883;
 
 @import '~tachyons-sass/tachyons';
 @import '~styles/icons';
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Raleway:400,700');
 
 html, body {
     font-family: 'Montserrat', sans-serif;
@@ -44,7 +44,7 @@ h1, h2, h3, h4 {
    -webkit-transform: translate(30px, 0);
    transform: translate(30px, 0);
  }
- 
+
  .slide-left-leave-active, .slide-right-enter {
    opacity: 0;
    -webkit-transform: translate(-30px, 0);
