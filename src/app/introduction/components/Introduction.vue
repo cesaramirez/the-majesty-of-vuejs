@@ -47,8 +47,9 @@
             </a>
           </div>
           <div class="fl w-50 w-25-l pa2">
-            <a href="#">
-              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <a href="#" @click.prevent="show('ember')">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
+                  :class="techs.ember ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/ember.png" class="h4-l h3 dib" title="Ember">
                 </div>
@@ -162,6 +163,21 @@
         <p class="lh-copy f5 black-70 tl tj">This is due to React’s many heavy invariant checks, which help it to provide many excellent warnings and error messages.</p>
       </article>
       </transition>
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.ember" id="tech">
+        <div class="tc">
+          <img src="/static/logos/ember.png" class="h4 dib" title="Ember">
+          <h3 class="f3">Ember</h3>
+        </div>
+        <p class="lh-copy center f5 black-70 tl tj">Ember is a full-featured framework that is designed to be highly opinionated. It provides a lot of established conventions and once you are familiar enough with them, it can make you very productive. However, it also means the learning curve is high and flexibility suffers. It’s a trade-off when you try to pick between an opinionated framework and a library with a loosely coupled set of tools that work together. The latter gives you more freedom but also requires you to make more architectural decisions.</p>
+        <p class="lh-copy center f5 black-70 tl tj">That said, it would probably make a better comparison between Vue core and Ember’s templating and object model layers:</p>
+        <ul class="list tl pl0 lh-copy f5 black-70 tj">
+          <li class="mv1">Vue provides unobtrusive reactivity on plain JavaScript objects and fully automatic computed properties. In Ember, you need to wrap everything in Ember Objects and manually declare dependencies for computed properties.</li>
+          <li class="mv1">Vue’s template syntax harnesses the full power of JavaScript expressions, while Handlebars’ expression and helper syntax is intentionally quite limited in comparison.</li>
+          <li class="mv1">Performance-wise, Vue outperforms Ember by a fair margin, even after the latest Glimmer engine update in Ember 2.0. Vue automatically batches updates, while in Ember you need to manually manage run loops in performance-critical situations.</li>
+        </ul>
+      </article>
+      </transition>
     </div>
     </div>
   </div>
@@ -176,7 +192,8 @@
           techs: {
             angularjs: false,
             angular: false,
-            react: false
+            react: false,
+            ember: false
           }
         }
       },
