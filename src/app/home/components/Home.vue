@@ -1,10 +1,10 @@
 <template>
   <div>
-      <div class="dt tc center mv4">
+      <div class="dt tc center mv4 ph2-ns">
         <img src="~@/assets/logo.png" class="dib v-mid h4 dtc mr4">
-        <h1 class="blue f-subheadline v-mid dtc">The Majesty of Vue.js</h1>
+        <h1 class="blue f-subheadline v-mid dtc f1-ns">The Majesty of Vue.js</h1>
       </div>
-      <div class="mw8 w80 tc dib">
+      <div class="mw8 w80 tc dib ph4-ns">
         <p class="f5 lh-copy">This Site is based in the book The Majesty of VueJs, will guide you through the path of the rapidly spreading Javascript Framework called Vue.js!</p>
         <div>
           <h2 class="f2">About the Book</h2>

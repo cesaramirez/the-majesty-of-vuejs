@@ -2,12 +2,12 @@
   <div>
     <div class="dt tc center mv4">
       <router-link to="/">
-        <img src="~@/assets/logo.png" class="dib v-mid h3 dtc mr4">
+        <img src="~@/assets/logo.png" class="dib v-mid h3 dtc-l mr4">
       </router-link>
-      <h1 class="blue f1 fw4 v-mid dtc">Introduction /</h1>
-      <h2 class="green f2 fw4 v-mid dtc">About Vue.js</h2>
+      <h1 class="blue f1 fw4 v-mid dtc-l">Introduction /</h1>
+      <h2 class="green f2 fw4 v-mid dtc-l db">About Vue.js</h2>
     </div>
-    <div class="mt5 mw8 center">
+    <div class="mt5 mw8 center ph4-ns">
         <h3 class="f3 tl fw6">Vue.js Overview</h3>
         <p class="tj lh-copy">Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and <a :href="libraries" target="_blank" class="link green hover-blue">supporting libraries.</a></p>
         <p class="tj lh-copy">If you are an experienced frontend developer and you want to know how Vue.js compares to other libraries/frameworks, check out the Comparison with Other Frameworks chapter.</p>
@@ -16,68 +16,68 @@
       <h3 class="f3 tl fw6">Comparison with Other Frameworks</h3>
       <div class="mw9 center ph3-ns">
         <div class="cf ph2-ns">
-          <div class="fl w-100 w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#" @click.prevent="show('angularjs')">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
                   :class="techs.angularjs ? 'b--green': 'b--black-10'">
                 <div class="tc">
-                  <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
+                  <img src="/static/logos/angular-js.svg" class="h4-l h3 dib" title="Angular 1">
                 </div>
               </div>
             </a>
           </div>
-          <div class="fl w-third w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#" @click.prevent="show('angular')">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
                   :class="techs.angular ? 'b--green': 'b--black-10'">
                 <div class="tc">
-                  <img src="/static/logos/angular.png" class="h4 dib" title="Angular 2">
+                  <img src="/static/logos/angular.png" class="h4-l h3 dib" title="Angular 2">
                 </div>
               </div>
             </a>
           </div>
-          <div class="fl w-third w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#" @click.prevent="show('react')">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
                   :class="techs.react ? 'b--green': 'b--black-10'">
                 <div class="tc">
-                  <img src="/static/logos/react.svg" class="h4 dib" title="React">
+                  <img src="/static/logos/react.svg" class="h4-l h3 dib" title="React">
                 </div>
               </div>
             </a>
           </div>
-          <div class="fl w-third w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                 <div class="tc">
-                  <img src="/static/logos/ember.png" class="h4 dib" title="Ember">
+                  <img src="/static/logos/ember.png" class="h4-l h3 dib" title="Ember">
                 </div>
               </div>
             </a>
           </div>
-          <div class="fl w-third w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#tech">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                 <div class="tc">
-                  <img src="/static/logos/polymer.png" class="h4 dib" title="Polymer">
+                  <img src="/static/logos/polymer.png" class="h4-l h3 dib" title="Polymer">
                 </div>
               </div>
             </a>
           </div>
-          <div class="fl w-third w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#tech">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                 <div class="tc">
-                  <img src="/static/logos/knockout.svg" class="h4 dib" title="Knockout">
+                  <img src="/static/logos/knockout.svg" class="h4-l h3 dib" title="Knockout">
                 </div>
               </div>
             </a>
           </div>
-          <div class="fl w-third w-25-ns pa2">
+          <div class="fl w-50 w-25-l pa2">
             <a href="#tech">
               <div class="mw5 center bg-white br3 pv3 ph1 pv4-ns mv3 ba b--black-10">
                 <div class="tc">
-                  <img src="/static/logos/riot.png" class="h4 dib" title="Riot">
+                  <img src="/static/logos/riot.png" class="h4-l h3 dib" title="Riot">
                 </div>
               </div>
             </a>
@@ -85,7 +85,7 @@
         </div>
       </div>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.angularjs" id="tech">
+        <article class="mw8 center bg-white br3 pa4 pa4-ns ma3 ba b--black-10" v-if="techs.angularjs" id="tech">
           <div class="tc">
             <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
             <h3 class="f3">Angular 1</h3>
