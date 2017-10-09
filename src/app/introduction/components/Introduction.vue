@@ -57,8 +57,9 @@
             </a>
           </div>
           <div class="fl w-50 w-25-l pa2">
-            <a href="#tech">
-              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <a href="#polymer" @click.prevent="show('polymer')">
+              <div class="mw5 center bg-white br3 pv3 pv4-ns mv3 ba"
+                  :class="techs.polymer ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/polymer.png" class="h4-l h3 dib" title="Polymer">
                 </div>
@@ -178,6 +179,18 @@
         </ul>
       </article>
       </transition>
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.polymer" id="polymer">
+        <div class="tc">
+          <img src="/static/logos/polymer.png" class="h4 dib" title="Polymer">
+          <h3 class="f3">Polymer</h3>
+        </div>
+        <p class="lh-copy center f5 black-70 tl tj">Polymer is yet another Google-sponsored project and in fact was a source of inspiration for Vue as well. Vue’s components can be loosely compared to Polymer’s custom elements and both provide a very similar development style. The biggest difference is that Polymer is built upon the latest Web Components features and requires non-trivial polyfills to work (with degraded performance) in browsers that don’t support those features natively. In contrast, Vue works without any dependencies or polyfills down to IE9.</p>
+        <p class="lh-copy center f5 black-70 tl tj">In Polymer 1.0, the team has also made its data-binding system very limited in order to compensate for the performance. For example, the only expressions supported in Polymer templates are boolean negation and single method calls. Its computed property implementation is also not very flexible.</p>
+        <p class="lh-copy center f5 black-70 tl tj">Polymer custom elements are authored in HTML files, which limits you to plain JavaScript/CSS (and language features supported by today’s browsers). In comparison, Vue’s single file components allows you to easily use ES2015+ and any CSS preprocessors you want.</p>
+        <p class="lh-copy center f5 black-70 tl tj">When deploying to production, Polymer recommends loading everything on-the-fly with HTML Imports, which assumes browsers implementing the spec, and HTTP/2 support on both server and client. This may or may not be feasible depending on your target audience and deployment environment. In cases where this is not desirable, you will have to use a special tool called Vulcanizer to bundle your Polymer elements. On this front, Vue can combine its async component feature with Webpack’s code-splitting feature to easily split out parts of the application bundle to be lazy-loaded. This ensures compatibility with older browsers while retaining great app loading performance.</p>
+      </article>
+      </transition>
     </div>
     </div>
   </div>
@@ -193,7 +206,8 @@
             angularjs: false,
             angular: false,
             react: false,
-            ember: false
+            ember: false,
+            polymer: false
           }
         }
       },
