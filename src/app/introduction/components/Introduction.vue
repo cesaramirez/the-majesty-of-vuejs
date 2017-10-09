@@ -77,8 +77,9 @@
             </a>
           </div>
           <div class="fl w-50 w-25-l pa2">
-            <a href="#tech">
-              <div class="mw5 center bg-white br3 pv3 ph1 pv4-ns mv3 ba b--black-10">
+            <a href="#tech" @click.prevent="show('riot')">
+              <div class="mw5 center bg-white br3 pv3 ph1 pv4-ns mv3 ba"
+                  :class="techs.riot ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/riot.png" class="h4-l h3 dib" title="Riot">
                 </div>
@@ -88,12 +89,12 @@
         </div>
       </div>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa4 pa4-ns ma3 ba b--black-10" v-if="techs.angularjs" id="tech">
+        <article class="mw8 center bg-white br3 pa4 pa4-ns ma3 ba b--black-10" v-show="techs.angularjs" id="tech">
           <div class="tc">
             <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
             <h3 class="f3">Angular 1</h3>
           </div>
-          <p class="lh-copy center f5 black-70 tl tj">Some of Vue’s syntax will look very similar to Angular (e.g. v-if vs ng-if). This is because there were a lot of things that Angular got right and these were an inspiration for Vue very early in its development. There are also many pains that come with Angular however, where Vue has attempted to offer a significant improvement.</p>
+          <p class="lh-copy center f5 black-70 tl tj">Some of Vue’s syntax will look very similar to Angular (e.g. v-show vs ng-if). This is because there were a lot of things that Angular got right and these were an inspiration for Vue very early in its development. There are also many pains that come with Angular however, where Vue has attempted to offer a significant improvement.</p>
           <hr class="mw3 bb bw1 b--black-10">
           <h4 class="f4 fw6">Complexity</h4>
           <p class="lh-copy f5 black-70 tl tj">Vue is much simpler than Angular 1, both in terms of API and design. Learning enough to build non-trivial applications typically takes less than a day, which is not true for Angular 1.</p>
@@ -114,7 +115,7 @@
           </article>
       </transition>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.angular" id="tech">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-show="techs.angular" id="tech">
         <div class="tc">
           <img src="/static/logos/angular.png" class="h4 dib" title="Angular 2">
           <h3 class="f3">Angular 2</h3>
@@ -134,7 +135,7 @@
       </article>
       </transition>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.react" id="tech">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-show="techs.react" id="tech">
         <div class="tc">
           <img src="/static/logos/react.svg" class="h4 dib" title="React">
           <h3 class="f3">React</h3>
@@ -166,7 +167,7 @@
       </article>
       </transition>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.ember" id="tech">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-show="techs.ember" id="tech">
         <div class="tc">
           <img src="/static/logos/ember.png" class="h4 dib" title="Ember">
           <h3 class="f3">Ember</h3>
@@ -181,7 +182,7 @@
       </article>
       </transition>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.polymer" id="polymer">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-show="techs.polymer" id="polymer">
         <div class="tc">
           <img src="/static/logos/polymer.png" class="h4 dib" title="Polymer">
           <h3 class="f3">Polymer</h3>
@@ -193,7 +194,7 @@
       </article>
       </transition>
       <transition name="fade" mode="out-in">
-        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.knockout" id="polymer">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-show="techs.knockout" id="polymer">
         <div class="tc">
           <img src="/static/logos/knockout.svg" class="h4 dib" title="Knockout">
           <h3 class="f3">Knockout</h3>
@@ -201,6 +202,22 @@
         <p class="lh-copy center f5 black-70 tl tj">Knockout was a pioneer in the MVVM and dependency tracking spaces and its reactivity system is very similar to Vue’s. Its browser support is also very impressive considering everything it does, with support back to IE6! Vue on the other hand only supports IE9+.</p>
         <p class="lh-copy center f5 black-70 tl tj">Over time though, Knockout development has slowed and it’s begun to show its age a little. For example, its component system lacks a full set of lifecycle hooks and although it’s a very common use case, the interface for passing children to a component feels a little clunky compared to Vue’s.</p>
         <p class="lh-copy center f5 black-70 tl tj">There also seem to be philosophical differences in the API design which if you’re curious, can be demonstrated by how each handles the creation of a simple todo list. It’s definitely somewhat subjective, but many consider Vue’s API to be less complex and better structured.</p>
+      </article>
+      </transition>
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-show="techs.riot" id="riot">
+        <div class="tc">
+          <img src="/static/logos/riot.png" class="h4 dib" title="Riot">
+          <h3 class="f3">Riot</h3>
+        </div>
+        <p class="lh-copy center f5 black-70 tl tj">Riot 2.0 provides a similar component-based development model (which is called a “tag” in Riot), with a minimal and beautifully designed API. Riot and Vue probably share a lot in design philosophies. However, despite being a bit heavier than Riot, Vue does offer some significant advantages:</p>
+        <ul class="list tl pl0 lh-copy f5 black-70 tj">
+          <li class="mv1">• True conditional rendering. Riot renders all if branches and simply shows/hides them.</li>
+          <li class="mv1">• A far more powerful router. Riot’s routing API is extremely minimal.</li>
+          <li class="mv1">• More mature tooling support. Vue provides official support for Webpack, Browserify, and SystemJS, while Riot relies on community support for build system integration.</li>
+          <li class="mv1">• Transition effect system. Riot has none.</li>
+          <li class="mv1">• Better performance. Despite advertising use of a virtual DOM, Riot in fact uses dirty checking and thus suffers from the same per formance issues as Angular 1.</li>
+        </ul>
       </article>
       </transition>
     </div>
@@ -220,7 +237,8 @@
             react: false,
             ember: false,
             polymer: false,
-            knockout: false
+            knockout: false,
+            riot: false
           }
         }
       },
