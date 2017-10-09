@@ -67,8 +67,9 @@
             </a>
           </div>
           <div class="fl w-50 w-25-l pa2">
-            <a href="#tech">
-              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <a href="#tech" @click.prevent="show('knockout')">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
+                  :class="techs.knockout ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/knockout.svg" class="h4-l h3 dib" title="Knockout">
                 </div>
@@ -191,6 +192,17 @@
         <p class="lh-copy center f5 black-70 tl tj">When deploying to production, Polymer recommends loading everything on-the-fly with HTML Imports, which assumes browsers implementing the spec, and HTTP/2 support on both server and client. This may or may not be feasible depending on your target audience and deployment environment. In cases where this is not desirable, you will have to use a special tool called Vulcanizer to bundle your Polymer elements. On this front, Vue can combine its async component feature with Webpack’s code-splitting feature to easily split out parts of the application bundle to be lazy-loaded. This ensures compatibility with older browsers while retaining great app loading performance.</p>
       </article>
       </transition>
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.knockout" id="polymer">
+        <div class="tc">
+          <img src="/static/logos/knockout.svg" class="h4 dib" title="Knockout">
+          <h3 class="f3">Knockout</h3>
+        </div>
+        <p class="lh-copy center f5 black-70 tl tj">Knockout was a pioneer in the MVVM and dependency tracking spaces and its reactivity system is very similar to Vue’s. Its browser support is also very impressive considering everything it does, with support back to IE6! Vue on the other hand only supports IE9+.</p>
+        <p class="lh-copy center f5 black-70 tl tj">Over time though, Knockout development has slowed and it’s begun to show its age a little. For example, its component system lacks a full set of lifecycle hooks and although it’s a very common use case, the interface for passing children to a component feels a little clunky compared to Vue’s.</p>
+        <p class="lh-copy center f5 black-70 tl tj">There also seem to be philosophical differences in the API design which if you’re curious, can be demonstrated by how each handles the creation of a simple todo list. It’s definitely somewhat subjective, but many consider Vue’s API to be less complex and better structured.</p>
+      </article>
+      </transition>
     </div>
     </div>
   </div>
@@ -207,7 +219,8 @@
             angular: false,
             react: false,
             ember: false,
-            polymer: false
+            polymer: false,
+            knockout: false
           }
         }
       },
