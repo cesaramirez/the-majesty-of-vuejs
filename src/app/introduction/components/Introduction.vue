@@ -14,6 +14,73 @@
         <p class="tj lh-copy">If you are interested to learn more information about Vue.js’ core take a look at <a :href="guide" class="link green hover-blue">Vue.js official guide.</a></p>
       <hr class="mw4 bb b--blue left mv4">
       <h3 class="f3 tl fw6">Comparison with Other Frameworks</h3>
+      <div class="mw9 center ph3-ns">
+        <div class="cf ph2-ns">
+          <div class="fl w-100 w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="fl w-third w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/angular.png" class="h4 dib" title="Angular 2">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="fl w-third w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/react.svg" class="h4 dib" title="React">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="fl w-third w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/ember.png" class="h4 dib" title="Ember">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="fl w-third w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/polymer.png" class="h4 dib" title="Polymer">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="fl w-third w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/knockout.svg" class="h4 dib" title="Knockout">
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="fl w-third w-25-ns pa2">
+            <a href="#">
+              <div class="mw5 center bg-white br3 pv3 ph1 pv4-ns mv3 ba b--black-10">
+                <div class="tc">
+                  <img src="/static/logos/riot.png" class="h4 dib" title="Riot">
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
       <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
         <div class="tc">
           <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
@@ -54,7 +121,7 @@
         <hr class="mw3 bb bw1 b--black-10">
         <h4 class="f4">Learning Curve</h4>
         <p class="lh-copy f5 black-70 tl tj">To get started with Vue, all you need is familiarity with HTML and ES5 JavaScript (i.e. plain JavaScript). With these basic skills, you can start building non-trivial applications within less than a day of reading the guide.</p>
-        <p class="lh-copy f5 black-70 tl tj">Angular’s learning curve is much steeper. The API surface of the framework is simply huge and as a user you will need to familiarize yourself with a lot more concepts before getting productive. Obviously, the complexity of Angular is largely due to its design goal of targeting only large, complex applications - but that does make the framework a lot more difficult for less-experienced developers to pick up.</p>        
+        <p class="lh-copy f5 black-70 tl tj">Angular’s learning curve is much steeper. The API surface of the framework is simply huge and as a user you will need to familiarize yourself with a lot more concepts before getting productive. Obviously, the complexity of Angular is largely due to its design goal of targeting only large, complex applications - but that does make the framework a lot more difficult for less-experienced developers to pick up.</p>
       </article>
     </div>
     </div>
