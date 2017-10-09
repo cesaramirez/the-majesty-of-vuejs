@@ -17,8 +17,9 @@
       <div class="mw9 center ph3-ns">
         <div class="cf ph2-ns">
           <div class="fl w-100 w-25-ns pa2">
-            <a href="#">
-              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <a href="#" @click.prevent="show('angularjs')">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
+                  :class="techs.angularjs ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
                 </div>
@@ -26,8 +27,9 @@
             </a>
           </div>
           <div class="fl w-third w-25-ns pa2">
-            <a href="#">
-              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <a href="#" @click.prevent="show('angular')">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
+                  :class="techs.angular ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/angular.png" class="h4 dib" title="Angular 2">
                 </div>
@@ -35,8 +37,9 @@
             </a>
           </div>
           <div class="fl w-third w-25-ns pa2">
-            <a href="#">
-              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <a href="#" @click.prevent="show('react')">
+              <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba"
+                  :class="techs.react ? 'b--green': 'b--black-10'">
                 <div class="tc">
                   <img src="/static/logos/react.svg" class="h4 dib" title="React">
                 </div>
@@ -53,7 +56,7 @@
             </a>
           </div>
           <div class="fl w-third w-25-ns pa2">
-            <a href="#">
+            <a href="#tech">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                 <div class="tc">
                   <img src="/static/logos/polymer.png" class="h4 dib" title="Polymer">
@@ -62,7 +65,7 @@
             </a>
           </div>
           <div class="fl w-third w-25-ns pa2">
-            <a href="#">
+            <a href="#tech">
               <div class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
                 <div class="tc">
                   <img src="/static/logos/knockout.svg" class="h4 dib" title="Knockout">
@@ -71,7 +74,7 @@
             </a>
           </div>
           <div class="fl w-third w-25-ns pa2">
-            <a href="#">
+            <a href="#tech">
               <div class="mw5 center bg-white br3 pv3 ph1 pv4-ns mv3 ba b--black-10">
                 <div class="tc">
                   <img src="/static/logos/riot.png" class="h4 dib" title="Riot">
@@ -81,33 +84,36 @@
           </div>
         </div>
       </div>
-      <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.angularjs" id="tech">
+          <div class="tc">
+            <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
+            <h3 class="f3">Angular 1</h3>
+          </div>
+          <p class="lh-copy center f5 black-70 tl tj">Some of Vue’s syntax will look very similar to Angular (e.g. v-if vs ng-if). This is because there were a lot of things that Angular got right and these were an inspiration for Vue very early in its development. There are also many pains that come with Angular however, where Vue has attempted to offer a significant improvement.</p>
+          <hr class="mw3 bb bw1 b--black-10">
+          <h4 class="f4 fw6">Complexity</h4>
+          <p class="lh-copy f5 black-70 tl tj">Vue is much simpler than Angular 1, both in terms of API and design. Learning enough to build non-trivial applications typically takes less than a day, which is not true for Angular 1.</p>
+          <hr class="mw3 bb bw1 b--black-10">
+          <h4 class="f4">Flexibility and Modularity</h4>
+          <p class="lh-copy f5 black-70 tl tj">Angular 1 has strong opinions about how your applications should be structured, while Vue is a more flexible, modular solution. That’s why a Webpack template3 is provided, that can set you up within minutes, while also granting you access to advanced features such as hot module reloading, linting, CSS extraction, and much more.</p>
+          <hr class="mw3 bb bw1 b--black-10">
+          <h4 class="f4">Data binding</h4>
+          <p class="lh-copy f5 black-70 tl tj">Angular 1 uses two-way binding between scopes, while Vue enforces a one-way data flow between components. This makes the flow of data easier to reason about in non-trivial applications.</p>
+          <hr class="mw3 bb bw1 b--black-10">
+          <h4 class="f4">Directives vs Components</h4>
+          <p class="lh-copy f5 black-70 tl tj">Vue has a clearer separation between directives and components. Directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic. In Angular, there’s a lot of confusion between the two.</p>
+          <hr class="mw3 bb bw1 b--black-10">
+          <h4 class="f4">Performance</h4>
+          <p class="lh-copy f5 black-70 tl tj">Vue has better performance and is much, much easier to optimize because it doesn’t use dirty checking. Angular 1 becomes slow when there are a lot of watchers, because every time anything in the scope changes, all these watchers need to be re-evaluated again. Also, the digest cycle may have to run multiple times to “stabilize” if some watcher triggers another update. Angular users often have to resort to esoteric techniques to get around the digest cycle, and in some situations, there’s simply no way to optimize a scope with many watchers.</p>
+          <p class="lh-copy f5 black-70 tl tj">Vue doesn’t suffer from this at all because it uses a transparent dependency-tracking observation system with async queueing - all changes trigger independently unless they have explicit depen- dency relationships.
+            Interestingly, there are quite a few similarities in how Angular 2 and Vue are addressing these Angular 1 issues.</p>
+          </article>
+      </transition>
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.angular" id="tech">
         <div class="tc">
-          <img src="/static/logos/angular-js.svg" class="h4 dib" title="Angular 1">
-          <h3 class="f3">Angular 1</h3>
-        </div>
-        <p class="lh-copy center f5 black-70 tl tj">Some of Vue’s syntax will look very similar to Angular (e.g. v-if vs ng-if). This is because there were a lot of things that Angular got right and these were an inspiration for Vue very early in its development. There are also many pains that come with Angular however, where Vue has attempted to offer a significant improvement.</p>
-        <hr class="mw3 bb bw1 b--black-10">
-        <h4 class="f4 fw6">Complexity</h4>
-        <p class="lh-copy f5 black-70 tl tj">Vue is much simpler than Angular 1, both in terms of API and design. Learning enough to build non-trivial applications typically takes less than a day, which is not true for Angular 1.</p>
-        <hr class="mw3 bb bw1 b--black-10">
-        <h4 class="f4">Flexibility and Modularity</h4>
-        <p class="lh-copy f5 black-70 tl tj">Angular 1 has strong opinions about how your applications should be structured, while Vue is a more flexible, modular solution. That’s why a Webpack template3 is provided, that can set you up within minutes, while also granting you access to advanced features such as hot module reloading, linting, CSS extraction, and much more.</p>
-        <hr class="mw3 bb bw1 b--black-10">
-        <h4 class="f4">Data binding</h4>
-        <p class="lh-copy f5 black-70 tl tj">Angular 1 uses two-way binding between scopes, while Vue enforces a one-way data flow between components. This makes the flow of data easier to reason about in non-trivial applications.</p>
-        <hr class="mw3 bb bw1 b--black-10">
-        <h4 class="f4">Directives vs Components</h4>
-        <p class="lh-copy f5 black-70 tl tj">Vue has a clearer separation between directives and components. Directives are meant to encapsulate DOM manipulations only, while components are self-contained units that have their own view and data logic. In Angular, there’s a lot of confusion between the two.</p>
-        <hr class="mw3 bb bw1 b--black-10">
-        <h4 class="f4">Performance</h4>
-        <p class="lh-copy f5 black-70 tl tj">Vue has better performance and is much, much easier to optimize because it doesn’t use dirty checking. Angular 1 becomes slow when there are a lot of watchers, because every time anything in the scope changes, all these watchers need to be re-evaluated again. Also, the digest cycle may have to run multiple times to “stabilize” if some watcher triggers another update. Angular users often have to resort to esoteric techniques to get around the digest cycle, and in some situations, there’s simply no way to optimize a scope with many watchers.</p>
-        <p class="lh-copy f5 black-70 tl tj">Vue doesn’t suffer from this at all because it uses a transparent dependency-tracking observation system with async queueing - all changes trigger independently unless they have explicit depen- dency relationships.
-        Interestingly, there are quite a few similarities in how Angular 2 and Vue are addressing these Angular 1 issues.</p>
-      </article>
-      <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
-        <div class="tc">
-          <img src="/static/logos/angular.png" class="h4 dib" title="Angular 1">
+          <img src="/static/logos/angular.png" class="h4 dib" title="Angular 2">
           <h3 class="f3">Angular 2</h3>
         </div>
         <p class="lh-copy center f5 black-70 tl tj">There is a separate section for Angular 2 because it really is a completely new framework. For example, it features a first-class component system, many implementation details have been completely rewritten, and the API has also changed quite drastically.</p>
@@ -123,6 +129,39 @@
         <p class="lh-copy f5 black-70 tl tj">To get started with Vue, all you need is familiarity with HTML and ES5 JavaScript (i.e. plain JavaScript). With these basic skills, you can start building non-trivial applications within less than a day of reading the guide.</p>
         <p class="lh-copy f5 black-70 tl tj">Angular’s learning curve is much steeper. The API surface of the framework is simply huge and as a user you will need to familiarize yourself with a lot more concepts before getting productive. Obviously, the complexity of Angular is largely due to its design goal of targeting only large, complex applications - but that does make the framework a lot more difficult for less-experienced developers to pick up.</p>
       </article>
+      </transition>
+      <transition name="fade" mode="out-in">
+        <article class="mw8 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10" v-if="techs.react" id="tech">
+        <div class="tc">
+          <img src="/static/logos/react.svg" class="h4 dib" title="React">
+          <h3 class="f3">React</h3>
+        </div>
+        <p class="lh-copy center f5 black-70 tl tj">React and Vue share many similarities. They both:</p>
+        <ul class="list tl pl0 lh-copy f5 black-70 tj">
+          <li class="mv1">Utilize a virtual DOM.</li>
+          <li class="mv1">Provide reactive and composable view components.</li>
+          <li class="mv1">Maintain focus in the core library, with concerns such as routing and global state management handled by companion libraries.</li>
+        </ul>
+        <hr class="mw3 bb bw1 b--black-10">
+        <h4 class="f4 fw6">Performance Profiles</h4>
+        <p class="lh-copy f5 black-70 tl tj">In every real-world scenario that has been tested so far, Vue outperforms React by a fair margin.</p>
+        <h5 class="f5">Render Performance</h5>
+        <p class="lh-copy f5 black-70 tl tj">When rendering UI, manipulating the DOM is typically the most expensive operation and unfortu- nately, no library can make those raw operations faster. The best it can be done is:</p>
+        <ul class="list tl lh-copy f5 black-70 tl tj pl0">
+          <li class="mv1">1. Minimize the number of necessary DOM mutations. Both React and Vue use virtual DOM abstractions to accomplish this and both implementations work about equally well.</li>
+          <li class="mv1">2. Add as little overhead as possible on top of those DOM manipulations. This is an area where Vue and React differ. In React, let’s say the additional overhead of rendering an element is 1 and the overhead of an average component is 2. In Vue, the overhead of an element would be more like 0.1, but the overhead of an average component would be 4, due to the setup required for the reactivity system.</li>
+        </ul>
+        <p class="lh-copy f5 black-70 tl tj">This means that in typical applications, where there are many more elements than components being rendered, Vue will outperform React by a significant margin. In extreme cases however, such as using 1 normal component to render each element, Vue will usually be slower.</p>
+        <p class="lh-copy f5 black-70 tl tj">Both Vue and React also offer functional components, which are stateless and instanceless - and therefore, require less overhead. When these are used in performance-critical situations, Vue is once again faster.</p>
+        <h5 class="f5">Update Performance</h5>
+        <p class="lh-copy f5 black-70 tl tj">In React, you need to implement shouldComponentUpdate everywhere and use immutable data structures to achieve fully optimized re-renders. In Vue, a component’s dependencies are automat- ically tracked so that it only updates when one of those dependencies change. The only further optimization that sometimes can be helpful in Vue is adding a key attribute to items in long lists.</p>
+        <p class="lh-copy f5 black-70 tl tj">This means updates in unoptimized Vue will be much faster than unoptimized React and actually, due to the improved render performance in Vue, even fully-optimized React will usually be slower than Vue is out-of-the-box.</p>
+        <h5 class="f5">In Development</h5>
+        <p class="lh-copy f5 black-70 tl tj">Obviously, performance in production is the most important and that’s what we’ve been discussing so far. Performance in development still matters though. The good news is that both Vue and React remain fast enough in development for most normal applications.</p>
+        <p class="lh-copy f5 black-70 tl tj">However, if you’re prototyping any high-performance data visualizations or animations, you may find it useful to know that in scenarios where Vue can’t handle more than 10 frames per second in development, we’ve seen React slow down to about 1 frame per second.</p>
+        <p class="lh-copy f5 black-70 tl tj">This is due to React’s many heavy invariant checks, which help it to provide many excellent warnings and error messages.</p>
+      </article>
+      </transition>
     </div>
     </div>
   </div>
@@ -133,7 +172,20 @@
       data () {
         return {
           libraries: 'https://github.com/vuejs/awesome-vue#libraries--plugins',
-          guide: 'https://vuejs.org/v2/guide/'
+          guide: 'https://vuejs.org/v2/guide/',
+          techs: {
+            angularjs: false,
+            angular: false,
+            react: false
+          }
+        }
+      },
+      methods: {
+        show (tech) {
+          for (var key in this.techs) {
+            this.techs[key] = false
+          }
+          this.techs[tech] = true
         }
       }
     }
